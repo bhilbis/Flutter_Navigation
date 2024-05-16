@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'pages/home_page.dart';
-import 'pages/book_page.dart';
-import 'pages/history_page.dart';
+import 'pages/currency_conversion.dart';
+import 'pages/temp_conversion.dart';
 import 'pages/profile_page.dart';
 
 class GoogleBottomBar extends StatefulWidget {
@@ -118,9 +118,9 @@ class _GoogleBottomBarState extends State<GoogleBottomBar> {
       case 0:
         return HomePage();
       case 1:
-        return BookPage();
+        return SuhuConverterApp();
       case 2:
-        return HistoryPage();
+        return CurrencyConverter();
       case 3:
         return ProfilePage();
       default:
@@ -136,14 +136,14 @@ class _GoogleBottomBarState extends State<GoogleBottomBar> {
       unselectedColor: Colors.grey,
     ),
     SalomonBottomBarItem(
-      icon: const Icon(Icons.book_online_outlined),
-      title: const Text("Book"),
+      icon: const Icon(Icons.thermostat_auto),
+      title: const Text("Temp Conversion"),
       selectedColor: Colors.pink,
       unselectedColor: Colors.grey,
     ),
     SalomonBottomBarItem(
-      icon: const Icon(Icons.history_outlined),
-      title: const Text("History"),
+      icon: const Icon(Icons.currency_exchange_rounded),
+      title: const Text("Currency Conversion"),
       selectedColor: Colors.orange,
       unselectedColor: Colors.grey,
     ),
